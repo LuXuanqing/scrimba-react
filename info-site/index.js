@@ -8,8 +8,8 @@
 //         </ul>
 //     </nav>
 // }
-const page = (
-    <div>
+function MyComponent() {
+    return <div>
         <img src="./react-logo.png" width="40px"></img >
         <h1>Fun facts about React</h1>
         <ul>
@@ -20,7 +20,7 @@ const page = (
             <li>Powers thousands of enterprise apps, including mobile apps</li>
         </ul>
     </div>
-)
+}
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
-root.render(page)
+root.render(<MyComponent />)
