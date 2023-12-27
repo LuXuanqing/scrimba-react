@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #21222a;
+  padding: 31px 26px;
+  height: 90px;
+}
+
+.nav-logo {
+  margin-right: 7px;
+}
+
+.nav-title {
+  /* ReactFacts */
+  margin-right: auto;
+
+  font-weight: 700;
+  font-size: 22.2535px;
+  line-height: 27px;
+  letter-spacing: -0.05em;
+
+  color: #61dafb;
+}
+
+.nav-subtitle {
+  /* extra title */
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+
+  color: #deebf8;
+}
