@@ -59,7 +59,8 @@ main {
 }
 
 .main-list {
-  margin-top: 46px;
+  padding-top: 46px;
+  padding-left: 76px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -68,4 +69,9 @@ main {
 .main-list > li {
   padding-block: 10px;
   max-width: 390px;
+}
+
+.main-list > li::marker {
+  font-size: 1.4rem;
+  color: #61dafb;
 }
