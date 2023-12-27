@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  margin: 0;
   font-family: Inter, sans-serif;
 }
 
@@ -39,4 +39,33 @@ nav {
   text-align: right;
 
   color: #deebf8;
+}
+
+main {
+  /* main section */
+  background: #282d35;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.main-title {
+  /* title */
+  padding-top: 57px;
+  padding-left: 27px;
+  font-weight: 700;
+  font-size: 39.06px;
+  line-height: 47px;
+  letter-spacing: -0.05em;
+}
+
+.main-list {
+  margin-top: 46px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.main-list > li {
+  padding-block: 10px;
+  max-width: 390px;
 }
