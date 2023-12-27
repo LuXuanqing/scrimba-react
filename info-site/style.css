@@ -46,6 +46,9 @@ main {
   background: #282d35;
   height: 100vh;
   color: #ffffff;
+  background-image: url("./src/images/reactjs-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .main-title {
