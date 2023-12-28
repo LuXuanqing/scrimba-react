@@ -1,8 +1,7 @@
 .card {
   width: 176px;
   color: #222;
-  font-size: 12px;
-  font-style: normal;
+  font-size: 0.75rem;
   font-weight: 300;
   line-height: 110%; /* 13.2px */
   display: flex;
@@ -10,9 +9,12 @@
   gap: 8px;
 }
 
-/* .card-image-container {
-  max-width: 100%;
-} */
+.card-title {
+  color: #222;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 110%; /* 13.2px */
+}
 
 .card-image {
   width: 100%;
