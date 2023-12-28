@@ -4,8 +4,7 @@ import star from "../public/images/star.svg";
 import dot from "../public/images/dot.svg";
 
 export default function Card(props) {
-  console.log(props.item);
-  const { coverImg, stats, location, title, price, openSpots } = props.item;
+  const { coverImg, stats, location, title, price, openSpots } = props;
   let badge;
   if (openSpots === 0) {
     badge = <div className="card-badge bold">SOLD OUT</div>;
