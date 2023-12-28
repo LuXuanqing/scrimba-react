@@ -1,0 +1,39 @@
+form {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 44px;
+}
+
+input {
+  border-radius: 4.912px;
+  border: 0.819px solid var(--gray-300, #d1d5db);
+  background: var(--white, #fff);
+  box-shadow: 0px 0.819px 1.637px 0px rgba(0, 0, 0, 0.05);
+  padding: 7.369px 10.644px;
+}
+
+label {
+  color: var(--gray-700, #374151);
+  font-family: Karla;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 16.375px; /* 116.963% */
+}
+
+button {
+  /* bg */
+  grid-column: 1/-1;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #711f8d 1.14%, #a818da 100%);
+  padding: 10px 0;
+  /* font */
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -1.4px;
+  /* margin */
+  margin-top: 15px;
+}
