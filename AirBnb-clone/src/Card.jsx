@@ -1,22 +1,41 @@
 import "./Card.css";
-import image from "./assets/card1.png";
-import star from "./assets/star.svg";
-import dot from "./assets/dot.svg";
+// import image from "./assets/card1.png";
+import star from "../public/images/star.svg";
+import dot from "../public/images/dot.svg";
 
-export default function Card() {
+export default function Card({
+  img,
+  rating,
+  reviewCount,
+  location,
+  title,
+  price,
+  openSpots,
+}) {
+  let badge;
+  if (openSpots === 0) {
+    badge = <div className="card-badge bold">SOLD OUT</div>;
+  } else if (location === "Online") {
+    badge = <div className="card-badge bold">Online</div>;
+  }
   return (
     <div className="card">
-      <img src={image} alt="main card image" className="card-image" />
+      {badge}
+      <img
+        src={`../public/images/${img}`}
+        alt="main card image"
+        className="card-image"
+      />
       <p className="rating">
         <img src={star} alt="star icon" />
-        <span>5.0</span>
-        <span className="light-text-color">(6)</span>
+        <span>{rating}</span>
+        <span className="light-text-color">({reviewCount})</span>
         <img src={dot} alt="dot icon" />
-        <span className="light-text-color">USA</span>
+        <span className="light-text-color">{location}</span>
       </p>
-      <h2 className="card-title">Life lessons with Katie Zaferes</h2>
+      <h2 className="card-title">{title}</h2>
       <p>
-        <span className="heavy-font">From $136</span> / person
+        <span className="heavy-font">From ${price}</span> / person
       </p>
     </div>
   );

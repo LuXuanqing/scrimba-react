@@ -4,3 +4,15 @@
   border-radius: 8.95px;
   background: #fff;
 }
+
+.card-list {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-inline: 36px;
+  margin-top: 50px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

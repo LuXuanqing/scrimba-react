@@ -7,12 +7,15 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  /* flex: 0 0 auto; */
+  flex-shrink: 0;
+  position: relative;
 }
 
 .card-title {
   color: #222;
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 110%; /* 13.2px */
 }
 
@@ -33,6 +36,20 @@
   color: #918e9b;
 }
 
-.heavy-font {
-  font-weight: 600;
+.bold {
+  font-weight: bold;
+}
+
+.card-badge {
+  position: absolute;
+  width: 69px;
+  height: 20px;
+  left: 6px;
+  top: 6px;
+  background: #ffffff;
+  border-radius: 2px;
+  color: #222;
+  text-align: center;
+  font-size: 10.24px;
+  line-height: 20px;
 }
