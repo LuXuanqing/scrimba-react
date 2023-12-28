@@ -3,15 +3,9 @@ import "./Card.css";
 import star from "../public/images/star.svg";
 import dot from "../public/images/dot.svg";
 
-export default function Card({
-  img,
-  rating,
-  reviewCount,
-  location,
-  title,
-  price,
-  openSpots,
-}) {
+export default function Card(props) {
+  console.log(props.item);
+  const { coverImg, stats, location, title, price, openSpots } = props.item;
   let badge;
   if (openSpots === 0) {
     badge = <div className="card-badge bold">SOLD OUT</div>;
@@ -22,16 +16,16 @@ export default function Card({
     <div className="card">
       {badge}
       <img
-        src={`../public/images/${img}`}
+        src={`../public/images/${coverImg}`}
         alt="main card image"
         className="card-image"
       />
       <p className="rating">
         <img src={star} alt="star icon" />
-        <span>{rating}</span>
-        <span className="light-text-color">({reviewCount})</span>
+        <span>{stats.rating}</span>
+        <span className="gray">({stats.reviewCount})</span>
         <img src={dot} alt="dot icon" />
-        <span className="light-text-color">{location}</span>
+        <span className="gray">{location}</span>
       </p>
       <h2 className="card-title">{title}</h2>
       <p>
