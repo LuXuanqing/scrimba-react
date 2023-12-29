@@ -6,9 +6,8 @@ function App() {
   return (
     <div className="app">
       <Navbar></Navbar>
-      <main>
-        <Meme />
-      </main>
+
+      <Meme />
     </div>
   );
 }

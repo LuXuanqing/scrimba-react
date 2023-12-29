@@ -1,3 +1,7 @@
+main {
+  padding: 28px 37px;
+}
+
 form {
   display: grid;
   grid-auto-rows: auto;
@@ -25,6 +29,7 @@ label {
 button {
   /* bg */
   grid-column: 1/-1;
+
   border-radius: 5px;
   background: linear-gradient(90deg, #711f8d 1.14%, #a818da 100%);
   padding: 10px 0;
@@ -36,4 +41,9 @@ button {
   letter-spacing: -1.4px;
   /* margin */
   margin-top: 15px;
+}
+
+.meme-image {
+  width: 100%;
+  margin-top: 43px;
 }
