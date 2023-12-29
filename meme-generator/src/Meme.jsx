@@ -3,15 +3,31 @@ import memeData from "./memeData";
 import { useState } from "react";
 
 export default function Meme() {
-  const [memeImage, setMemeImage] = useState("");
+  const [meme, setMeme] = useState({
+    topText: "",
+    bottomText: "",
+    imageUrl: "http://i.imgflip.com/1bij.jpg",
+  });
+  const [allMemeImages, setAllMemeImages] = useState(memeData);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const memes = memeData.data.memes;
-    const randomNumber = Math.floor(Math.random() * memes.length);
-    const { url } = memes[randomNumber];
+  function handleSubmit(event) {
+    event.preventDefault();
+    const memesArray = allMemeImages.data.memes;
+    const randomNumber = Math.floor(Math.random() * memesArray.length);
+    const { url } = memesArray[randomNumber];
     console.log(url);
-    setMemeImage(url);
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      imageUrl: url,
+    }));
+  }
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setMeme((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   }
 
   return (
@@ -19,18 +35,31 @@ export default function Meme() {
       <form action="" onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="top">Top text</label>
         <label htmlFor="bottom">Bottom text</label>
-        <input type="text" name="top" id="" placeholder="Shut up" />
         <input
           type="text"
-          name="bottom"
-          id=""
+          name="topText"
+          id="top"
+          placeholder="Shut up"
+          value={meme.topText}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="bottomText"
+          id="bottom"
           placeholder="And take my money"
+          value={meme.bottomText}
+          onChange={handleChange}
         />
         <button type="submit" className="full-row">
           Get a new meme image 🖼
         </button>
       </form>
-      <img src={memeImage} alt="" className="meme-image" />
+      <section className="meme">
+        <img src={meme.imageUrl} alt="" className="meme-image" />
+        <h2 className="meme-text meme-top">{meme.topText}</h2>
+        <h2 className="meme-text meme-bottom">{meme.bottomText}</h2>
+      </section>
     </main>
   );
 }

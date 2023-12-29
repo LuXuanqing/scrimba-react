@@ -43,7 +43,36 @@ button {
   margin-top: 15px;
 }
 
+.meme {
+  position: relative;
+  margin-top: 43px;
+}
+
 .meme-image {
   width: 100%;
-  margin-top: 43px;
+}
+
+.meme-text {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Impact;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.meme-top {
+  top: 16px;
+}
+
+.meme-bottom {
+  bottom: 16px;
 }
