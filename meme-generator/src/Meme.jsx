@@ -4,17 +4,20 @@ import React, { useState } from "react";
 
 export default function Meme() {
   const [meme, setMeme] = useState({
-    topText: "",
-    bottomText: "",
+    topText: "shut up",
+    bottomText: "and take my money",
     imageUrl: "http://i.imgflip.com/1bij.jpg",
   });
   const [allMemes, setAllMemes] = useState(memeData);
 
   React.useEffect(() => {
     console.log("effect ran");
-    fetch("https://api.imgflip.com/get_memes")
-      .then((res) => res.json())
-      .then((data) => setAllMemes(data.data.memes));
+    async function fetchMemes() {
+      const res = await fetch("https://api.imgflip.com/get_memes");
+      const data = await res.json();
+      setAllMemes(data.data.memes);
+    }
+    fetchMemes();
   }, []);
 
   function handleSubmit(event) {
